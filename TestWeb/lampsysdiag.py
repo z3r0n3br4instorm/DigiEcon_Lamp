@@ -22,6 +22,16 @@ def diag():
         GPIO.output(pin, GPIO.HIGH)
         time.sleep(1)
 
+    for i in range(0, 3):
+        for pin in switch_pins:
+            GPIO.setup(pin, GPIO.OUT)
+            GPIO.output(pin, GPIO.HIGH)
+        time.sleep(1)
+        for pin in switch_pins:
+            GPIO.setup(pin, GPIO.OUT)
+            GPIO.output(pin, GPIO.LOW)
+
+
 
 if __name__ == "__main__":
     diag()
