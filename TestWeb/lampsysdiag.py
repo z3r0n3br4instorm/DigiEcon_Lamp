@@ -24,10 +24,10 @@ def diag():
 
     for i in range(0, 10):
         for pin in switch_pins:
-            GPIO.output(pin, GPIO.HIGH)
+            GPIO.output(pin, GPIO.LOW)
         time.sleep(1)
         for pin in switch_pins:
-            GPIO.output(pin, GPIO.LOW)
+            GPIO.output(pin, GPIO.HIGH)
         time.sleep(1)
 
     while True :
