@@ -30,6 +30,10 @@ def diag():
             GPIO.output(pin, GPIO.LOW)
         time.sleep(1)
 
+    while True :
+        pin = int(input("Enter the pin number to test: "))
+        GPIO.output(pin, GPIO.HIGH)
+
 
 
 if __name__ == "__main__":
